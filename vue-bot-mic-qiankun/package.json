@@ -1,0 +1,59 @@
+{
+  "name": "vue-chat-bot",
+  "version": "1.0.13",
+  "description": "Chatbot UI using Vue.js 2",
+  "main": "dist/vue-chat-bot.common.js",
+  "files": [
+    "dist/*",
+    "src/*",
+    "package.json"
+  ],
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --dest demo",
+    "build-bundle": "vue-cli-service build --target lib --name vue-chat-bot ./src/vue-chat-bot.js",
+    "lint": "vue-cli-service lint --fix"
+  },
+  "keywords": [
+    "chatbot",
+    "bot ui",
+    "vue-chat-bot"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^7.6.1",
+    "@commitlint/config-conventional": "^7.6.0",
+    "@types/jest": "^24.0.11",
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-plugin-unit-jest": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "sass": "^1.19.0",
+    "sass-loader": "^8.0.2",
+    "standard-version": "^8.0.1",
+    "vue-loader": "^15.8.3",
+    "vue-svg-loader": "^0.15.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "license": "MIT",
+  "volta": {
+    "node": "16.14.0",
+    "yarn": "1.22.19"
+  },
+  "dependencies": {
+    "@traptitech/markdown-it-katex": "^3.6.0",
+    "bootstrap": "^4.3.1",
+    "core-js": "^3.3.2",
+    "highlight.js": "^11.8.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-link-attributes": "^4.0.1",
+    "qiankun": "^2.10.8",
+    "vue": "^2.6.10"
+  }
+}

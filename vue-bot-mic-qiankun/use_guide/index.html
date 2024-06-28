@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>微前端</title>
+</head>
+
+<body>
+  <main id="subapp-container"></main>
+</body>
+<script src="./bundle.js"></script>
+<script>
+  $qiankun.loadMicroApp({
+    name: 'chat-bot',
+    entry: 'http://10.41.95.88:8005',
+    container: '#subapp-container'
+  })
+
+  const initialState = { msg: '' };
+  // 定义全局状态，并返回通信方法，建议在主应用使用，微应用通过 props 获取通信方法
+  const actions = $qiankun.initGlobalState(initialState);
+
+  const msg = `给我一句古诗吧`
+
+  // 3s后调用微服务
+  setTimeout(() => {
+    actions.setGlobalState({
+      msg
+    })
+
+  }, 5000);
+</script>
+
+</html>
